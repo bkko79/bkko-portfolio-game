@@ -1,0 +1,47 @@
+html, body {
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden;
+  z-index: 100;
+  background-color: linen;
+}
+
+.header {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+  background-color: #E60012;
+  z-index: 501;
+}
+
+.header-right {
+  float: right;
+}
+
+.header > img, .header-right >img {
+  padding: 15px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: #E60012;
+  z-index: 501;
+}
+
+.footer > p {
+  color: #fff;
+  font-size: 14px;
+}
+
+.wf-roundedmplus1c { 
+  font-family: "M PLUS Rounded 1c"; 
+}
+
+.wf-notosansjapanese { 
+  font-family: "Noto Sans JP";
+}

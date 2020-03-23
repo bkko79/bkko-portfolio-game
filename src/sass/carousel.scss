@@ -1,0 +1,79 @@
+.game-carousel{
+  width: 300px;
+  border-top: 20px;
+  border-color: #E60012;
+  margin: 0 auto;
+  position: relative;
+  z-index: 300;
+  top: 50px;
+}
+
+.slick-arrow{
+  width: 100%;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  color: #FFF;
+}
+
+.arrow-shadow{
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 3px 3px 2px rgba(0, 255, 255, .7));
+}
+
+.slick-prev{
+  position: absolute;
+  top: 220px;
+  z-index: 1;
+}
+
+.slick-next{
+  position: absolute;
+  bottom: 220px;
+  z-index: 1;
+}
+
+.slick-list,
+.slick-track {
+  align-items:center;
+  perspective: 2000;
+  -webkit-perspective: 2000;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;  
+}
+
+.carousel-wrapper{
+  position: relative;
+  margin: 300px 0;
+  transform-style: preserve-3d;
+  perspective: 300px;
+}
+
+.carousel-image{
+  z-index: 2;
+}
+
+.game-main-image{
+  position:absolute;
+  top: 75px;
+  left: 73px;
+  transform: matrix(1.02, 0.28, -0.4, 0.86, 0, 0);
+  z-index: 302;
+}
+
+.game-border{
+  position:absolute;
+  border-color: #000;
+  border-bottom: 50px;
+  background-color: #333;
+  color: #ddd;
+  width: 170px;
+  height: 57px;
+  top: 173px;
+  left: 36px;
+  text-align:center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: matrix(1.015, 0.28, -0.4, 0.9, 0, 0);
+  z-index: 303;
+}
