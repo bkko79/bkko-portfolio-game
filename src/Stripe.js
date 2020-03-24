@@ -41,8 +41,8 @@ export default class Stripe extends React.Component {
     return(
         <div className="bgblock-wrapper">
         {colorGroup.map((chip,i) => (
-          <CSSTransition in={inProps} timeout={1000} classNames="stripe">
-            <div key={i} className="bgblock" style={this.getRgba(chip, i)} />
+          <CSSTransition key={i} in={inProps} timeout={1000} classNames="stripe">
+            <div className="bgblock" style={this.getRgba(chip, i)} />
           </CSSTransition>
         ))}
         </div>

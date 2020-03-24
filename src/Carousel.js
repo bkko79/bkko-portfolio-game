@@ -9,7 +9,6 @@ export default class Carousel extends React.Component {
 
   render(){
     const { Games, setInProps, setCurrentGame, importImage, setColorSet } = this.props;
-    const { inProps } = this.props;
     const ArrowPrev = ({currentSlide, slideCount, children, ...props}) => (
       <button
         {...props}

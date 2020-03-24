@@ -18,6 +18,9 @@ export default class Info extends React.Component {
     const point = Math.floor(Games[currentGame].price * 0.05);
     const link = Games[currentGame].link;
     const scGroup = Games[currentGame].scgroup;
+    scGroup.forEach((sc)=> {
+      require(`${sc}`);
+    })
     const bgGroup = [];
     Array.from(Array(3)).forEach(() => {
       scGroup.map((sc) => (bgGroup.push(sc)) )
