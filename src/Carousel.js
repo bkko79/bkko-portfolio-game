@@ -46,10 +46,11 @@ export default class Carousel extends React.Component {
       slidesToScroll: 1,
       beforeChange: function(currentSlide, nextSlide) {
         setCurrentGame(Object.keys(Games)[nextSlide]);
-        setInProps(!inProps);
+        setInProps(true);
       },
       afterChange: function(){
         getColorSet();
+        setInProps(false);
       }
     };
     return(

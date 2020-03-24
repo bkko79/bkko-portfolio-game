@@ -27,7 +27,7 @@ export default class Info extends React.Component {
         <div className="screenshot-wrapper">
           {bgGroup.map((sc, i) => (
             <div key={i} className="screenshot polaroid">
-              <CSSTransition in={inProps} timeout={200} classNames="sc">
+              <CSSTransition in={inProps} timeout={600} classNames="sc">
                 <img src={require(`${sc}`)} alt={i} />
               </CSSTransition>
             </div>

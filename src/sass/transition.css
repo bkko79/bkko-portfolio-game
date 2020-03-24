@@ -7,14 +7,6 @@
   transform: translateX(0);
   transition: opacity 300ms, transform 300ms;
 }
-.sc-exit {
-  opacity: 1;
-}
-.sc-exit-active {
-  opacity: 0;
-  transform: scale(0.5);
-  transition: opacity 300ms, transform 300ms;
-}
 
 .stripe {
   -webkit-animation-timing-function: linear;
@@ -33,7 +25,7 @@
 }
 .stripe-exit-active {
   opacity: 1;
-  transition: opacity 1000ms;
+  transition: opacity 500ms;
 }
 
 .title-enter {
@@ -43,14 +35,6 @@
   opacity: 1;
   transition: opacity 1000ms;
 }
-.title-exit {
-  opacity: 0;
-}
-.title-exit-active {
-  opacity: 1;
-  transform: translateY(-200px);
-  transition: opacity 1000ms, transform 1000ms;
-}
 
 .info-enter {
   opacity: 0;
@@ -58,11 +42,4 @@
 .info-enter-active {
   opacity: 1;
   transition: opacity 500ms;
-}
-.info-exit {
-  opacity: 0;
-}
-.info-exit-active {
-  opacity: 1;
-  transition: opacity 150ms;
 }

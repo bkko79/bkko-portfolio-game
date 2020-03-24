@@ -3,13 +3,17 @@ import {CSSTransition} from 'react-transition-group';
 import './sass/stripe.scss';
 
 export default class Stripe extends React.Component {
+  state = {
+    width: window.innerWidth,
+  }
+  
   getRgba = (chip, i) => {
     let text = 'rgba(';
     chip.map((color) => (
       text += `${color},`
     ));
     text += '0.8)';
-    let width = window.innerWidth * 1.5;
+    let width = this.state.width * 1.5;
     let height = (Math.random() * 200) + 200;
     let styles = {
       position: 'absolute',
