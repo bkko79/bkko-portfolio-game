@@ -1,4 +1,5 @@
 import React from 'react';
+import { TransitionGroup } from 'react-transition-group'
 import initialDatas from './initial-datas';
 import Stripe from './Stripe';
 import Info from './Info';
@@ -27,6 +28,14 @@ class App extends React.Component {
       [147, 84, 111],
       [87, 132, 196],
     ],
+    inProps: false,
+    colorSetChanged: false,
+  }
+
+  setInProps = (value) => {
+    this.setState({
+      inProps: value,
+    })
   }
 
   setCurentGame = (id) => {
@@ -38,13 +47,14 @@ class App extends React.Component {
   setColorSet = (newColorSet) => {
     this.setState({
       colorSet: newColorSet,
+      colorSetChanged: !this.state.colorSetChanged,
     })
   }
 
   render(){
     const Games = initialDatas.games;
-    const { currentGame, colorSet } = this.state;
-    const { setCurentGame, setColorSet } = this;
+    const { currentGame, colorSet, inProps, colorSetChanged } = this.state;
+    const { setInProps, setCurentGame, setColorSet } = this;
     return(
       <>
       <div className="header">
@@ -54,9 +64,11 @@ class App extends React.Component {
           <img src={search} height="18px" alt="nintendo search"/>
         </div>
       </div>
-      <Stripe colorSet={colorSet} />
-      <Info Games={Games} currentGame={currentGame} importImage={importAll} />
-      <Carousel Games={Games} setCurrentGame={setCurentGame} importImage={importAll} setColorSet={setColorSet} />
+      <TransitionGroup>
+        <Stripe colorSet={colorSet} inProps={colorSetChanged} />
+        <Info Games={Games} currentGame={currentGame} importImage={importAll} inProps={inProps} />
+      </TransitionGroup>
+      <Carousel Games={Games} setCurrentGame={setCurentGame} importImage={importAll} setColorSet={setColorSet} inProps={inProps} setInProps={setInProps} />
       <div className="footer"><p>©Nintendo Japan</p></div>
       </>
     )

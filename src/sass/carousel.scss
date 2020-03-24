@@ -1,4 +1,5 @@
 .game-carousel{
+  top: 20px;
   width: 300px;
   border-top: 20px;
   border-color: #E60012;
@@ -43,12 +44,13 @@
 
 .carousel-wrapper{
   position: relative;
-  margin: 300px 0;
+  margin: 310px 0;
   transform-style: preserve-3d;
   perspective: 300px;
 }
 
 .carousel-image{
+  padding: 10px auto;
   z-index: 2;
 }
 

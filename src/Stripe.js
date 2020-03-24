@@ -1,4 +1,5 @@
 import React from 'react';
+import {CSSTransition} from 'react-transition-group';
 import './sass/stripe.scss';
 
 export default class Stripe extends React.Component {
@@ -8,11 +9,11 @@ export default class Stripe extends React.Component {
       text += `${color},`
     ));
     text += '0.8)';
-    let width = window.innerWidth * 3;
-    let height = (Math.random() * 100) + 100;
+    let width = window.innerWidth * 1.5;
+    let height = (Math.random() * 200) + 200;
     let styles = {
       position: 'absolute',
-      top: `${(150 * i)-300}px`,
+      top: `${(300 * i)-450}px`,
       left: `-${(width / 2) -(window.innerWidth / 2)}px`,
       width: `${width}px`,
       height: `${height}px`,
@@ -28,17 +29,19 @@ export default class Stripe extends React.Component {
   }
 
   render(){
-    const { colorSet } = this.props;
+    const { colorSet, inProps } = this.props;
     let colorGroup = [];
-    Array.from(Array(2)).forEach(() => {
+    Array.from(Array(1)).forEach(() => {
       colorSet.map((chip) => (colorGroup.push(chip)) )
     });
     return(
-      <div className="bgblock-wrapper">
-      {colorGroup.map((chip,i) => (
-          <div key={i} className="bgblock" style={this.getRgba(chip, i)} />
-      ))}
-      </div>
+        <div className="bgblock-wrapper">
+        {colorGroup.map((chip,i) => (
+          <CSSTransition in={inProps} timeout={1000} classNames="stripe">
+            <div key={i} className="bgblock" style={this.getRgba(chip, i)} />
+          </CSSTransition>
+        ))}
+        </div>
     )
   }
 }

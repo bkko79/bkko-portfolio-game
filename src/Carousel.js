@@ -8,7 +8,8 @@ import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io';
 export default class Carousel extends React.Component {
 
   render(){
-    const { Games, setCurrentGame, importImage, setColorSet } = this.props;
+    const { Games, setInProps, setCurrentGame, importImage, setColorSet } = this.props;
+    const { inProps } = this.props;
     const ArrowPrev = ({currentSlide, slideCount, children, ...props}) => (
       <button
         {...props}
@@ -45,6 +46,7 @@ export default class Carousel extends React.Component {
       slidesToScroll: 1,
       beforeChange: function(currentSlide, nextSlide) {
         setCurrentGame(Object.keys(Games)[nextSlide]);
+        setInProps(!inProps);
       },
       afterChange: function(){
         getColorSet();
@@ -55,8 +57,8 @@ export default class Carousel extends React.Component {
         {Object.keys(Games).map((key, i) => (
           <div className="carousel-wrapper" key={i}>
             <div className="active-glow" />
-            <img className="carousel-image" src={Cartridge} alt="cartridge" width="300px" />
-            <img className="game-main-image" src={images[`${key}_main.jpg`]} alt="main_image" width="165px" height="110px" />
+            <img className="carousel-image" rel="preload" src={Cartridge} alt="cartridge" width="300px" />
+            <img className="game-main-image" rel="preload" src={images[`${key}_main.jpg`]} alt="main_image" width="165px" height="110px" />
             <div className="game-border"><p>{Games[key].serial}</p></div>
           </div>
         ))}
