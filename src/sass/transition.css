@@ -33,7 +33,18 @@
 }
 .title-enter-active {
   opacity: 1;
-  transition: opacity 1000ms;
+  animation: 500ms ease-in slideInFromTop;
+  transition: opacity 500ms;
+}
+
+
+@keyframes slideInFromTop {
+  0% {
+      transform: translateY(-50%);
+  }
+  100% {
+      transform: translateX(0);
+  }
 }
 
 .info-enter {
