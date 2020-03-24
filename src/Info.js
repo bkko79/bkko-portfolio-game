@@ -28,7 +28,7 @@ export default class Info extends React.Component {
           {bgGroup.map((sc, i) => (
             <div key={i} className="screenshot polaroid">
               <CSSTransition in={inProps} timeout={600} classNames="sc">
-                <img src={require(`${sc}`)} alt={i} />
+                <img rel="preload" src={require(`${sc}`)} alt={i} />
               </CSSTransition>
             </div>
           ))}
