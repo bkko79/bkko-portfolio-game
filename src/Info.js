@@ -33,7 +33,7 @@ export default class Info extends React.Component {
             </div>
           ))}
         </div>
-        <CSSTransition in={inProps} timeout={500} classNames="title">
+        <CSSTransition in={inProps} timeout={1000} classNames="title">
           <div className="title-wrapper wf-roundedmplus1c">
               <h1>{title}</h1>
           </div>

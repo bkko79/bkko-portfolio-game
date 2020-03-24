@@ -26,14 +26,14 @@
 }
 .stripe-enter-active {
   opacity: 1;
-  transition: opacity 100ms;
+  transition: opacity 500ms;
 }
 .stripe-exit {
   opacity: 0;
 }
 .stripe-exit-active {
   opacity: 1;
-  transition: opacity 100ms;
+  transition: opacity 1000ms;
 }
 
 .title-enter {
@@ -41,14 +41,15 @@
 }
 .title-enter-active {
   opacity: 1;
-  transition: opacity 500ms;
+  transition: opacity 1000ms;
 }
 .title-exit {
-  opacity: 1;
+  opacity: 0;
 }
 .title-exit-active {
+  opacity: 1;
   transform: translateY(-200px);
-  transition: opacity 150ms, transform 150ms;
+  transition: opacity 1000ms, transform 1000ms;
 }
 
 .info-enter {
