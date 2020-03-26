@@ -131,3 +131,13 @@
     top: 10px;
   }
 }
+
+
+@media only screen and (max-height: 667px) {
+  .slick-prev{
+    top: 23%;
+  }
+  .slick-next{
+    bottom: 23%;
+  }
+}
