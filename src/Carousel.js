@@ -55,9 +55,9 @@ export default class Carousel extends React.Component {
     return(
       <Slider {...settings}>
         {Object.keys(Games).map((key, i) => (
-          <div className="carousel-wrapper" key={i}>
-            <img className="carousel-image" rel="preload" src={Cartridge} alt="cartridge" width="300px" />
-            <img className="game-main-image" rel="preload" src={images[`${key}_main.jpg`]} alt="main_image" width="165px" height="110px" />
+          <div className="carousel-wrapper" key={i} >
+            <img className="carousel-image" rel="preload" src={Cartridge} alt="cartridge" />
+            <img className="game-main-image" rel="preload" src={images[`${key}_main.jpg`]} alt="main_image" />
             <div className="game-border"><p>{Games[key].serial}</p></div>
           </div>
         ))}

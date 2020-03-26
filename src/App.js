@@ -1,5 +1,5 @@
 import React from 'react';
-import { TransitionGroup } from 'react-transition-group'
+import { TransitionGroup } from 'react-transition-group';
 import initialDatas from './initial-datas';
 import Stripe from './Stripe';
 import Info from './Info';
@@ -53,7 +53,7 @@ class App extends React.Component {
 
   render(){
     const Games = initialDatas.games;
-    const { currentGame, colorSet, inProps, colorSetChanged } = this.state;
+    const { currentGame, colorSet, inProps, colorSetChanged,  } = this.state;
     const { setInProps, setCurentGame, setColorSet } = this;
     
     const images = importAll(require.context('./imgs', false, /\.(png|jpe?g|svg)$/));
@@ -75,10 +75,12 @@ class App extends React.Component {
       </TransitionGroup>
       <Carousel Games={Games} setCurrentGame={setCurentGame} importImage={importAll} setColorSet={setColorSet} inProps={inProps} setInProps={setInProps} />
       <div className="footer"><p>©Nintendo Japan</p></div>
-      {Object.keys(images).map((sc,i) => (
-        <img src={require(`./imgs/${sc}`)} alt={i} key={i} style={{display:"none"}}/>
-        ))
-      }
+      <div className ="imagePreload">
+        {Object.keys(images).map((sc,i) => (
+          <img src={require(`./imgs/${sc}`)} alt={i} key={i} style={{display:"none"}}/>
+          ))
+        }
+      </div>
       </>
     )
   }

@@ -45,3 +45,9 @@ html, body {
 .wf-notosansjapanese { 
   font-family: "Noto Sans JP";
 }
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    position: fixed;
+  }
+}

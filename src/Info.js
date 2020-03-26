@@ -7,6 +7,15 @@ import './sass/info.scss';
 import './sass/transition.css';
 
 export default class Info extends React.Component {
+  state = {
+    cartridgeTouched: false,
+  }
+
+  setCartridgeTouched = () => {
+    this.setState({
+      cartridgeTouched: !this.state.cartridgeTouched,
+    })
+  }
 
   render(){
     const { Games, currentGame, inProps } = this.props;
@@ -54,21 +63,23 @@ export default class Info extends React.Component {
           <div className="point-text"><GiTwoCoins color='gold'/>+{point}</div>
         </div>
         <CSSTransition in={inProps} timeout={500} classNames="info">
-          <div className="info-desc">
+          <div className={`info-desc ${this.state.cartridgeTouched && 'cartridgeTouched'}`}>
             <div className="info-desc-text wf-roundedmplus1c">
               {desc.split('\n').map((item, i) => { return <p key={i}>{item}</p>; })}
             </div>
           </div>
         </CSSTransition>
         <CSSTransition in={inProps} timeout={500} classNames="info">
-          <div className="youtube" onClick={this.getHigherZ}>
+          <div className={`youtube ${this.state.cartridgeTouched && 'cartridgeTouched'}`}>
             <ReactPlayer 
               url={movie}
               control='false'
-              width='550px'
+              width='100%'
+              height='100%'
             />
           </div>
         </CSSTransition>
+        <div className="detail-wrapper" onTouchStart={this.setCartridgeTouched} />
         <div className="purchase-wrapper">
           <a href={link} target="_blank" rel="noopener noreferrer">
             <div className="purchase-message wf-notosansjapanese">買う</div>

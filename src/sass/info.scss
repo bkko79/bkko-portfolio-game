@@ -1,7 +1,11 @@
+$img-width: 500px;
+$img-height: 281px;
+$img-space: 15px;
+
 .screenshot-wrapper {
   position: absolute;
   top: 50px;
-  height: 1632px;
+  height: $img-height * 6 + $img-space * 6 + 25;
   padding-left: 20px;
   animation: slide 60s linear infinite;
   z-index: 101;
@@ -12,7 +16,7 @@
     transform: translate3d(0, 0, 0);
   }
   100%{
-    transform: translate3d(0, -1632px, 0);
+    transform: translate3d(0, -($img-height * 6 + $img-space * 6  + 25), 0);
   }
 }
 
@@ -30,12 +34,12 @@
 }
 
 .screenshot-wrapper div:nth-child(even){
-  padding: 15px 10vw;
+  padding: $img-space 10vw;
 }
 
 .screenshot > img {
-  width: 450px;
-  height: 253px;
+  width: $img-width;
+  height: $img-height;
   box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.7);
   animation-fill-mode: forwards;
   animation: fadein 1s ease forwards;
@@ -156,6 +160,8 @@
 
 .youtube {
   position: absolute;
+  width: 550px;
+  height: 360px;
   bottom: 8%;
   padding: 5px;
   right: 30px;
@@ -212,4 +218,121 @@
   -ms-transition: opacity .15s ease-in-out;
   -moz-transition: opacity .15s ease-in-out;
   -webkit-transition: opacity .15s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .screenshot-wrapper {
+    top: 50px;
+    padding: 5%;
+  }
+
+  .screenshot {
+    margin: 0 auto;
+  }
+
+  .screenshot > img {
+    width: 100%;
+    height: inherit;
+  }
+  
+  @keyframes slide{
+    0%{
+      transform: translate3d(0, 0, 0);
+    }
+    100%{
+      transform: translate3d(0, -($img-height * 6 + $img-space * 6  + 25), 0);
+    }
+  }
+
+ 
+  .screenshot-wrapper div:nth-child(even){
+    padding: 15px 0px;
+  }
+
+  .title-wrapper {
+    top: 25px;
+  }
+  .title-wrapper > h1 {
+    font-size: 35px;
+  }
+
+  .price-tag {
+    width: 50%;
+    left: 25%;
+  }
+
+  .price-text{
+    font-size: 18pt;
+  }
+
+  .point-text{
+    font-size: 12pt;
+  }
+
+  .price-wrapper {
+    width: inherit;
+    bottom: 16%;
+    left: 40%;
+  }
+
+  .purchase-message {
+    padding-left: 15%;
+    font-size: 35px;
+  }
+
+  .release-date-wrapper{
+    bottom: 9%;
+    transform: rotate(0deg);
+  }
+
+  .release-date-title {
+    font-size: 30px;
+    height: 20px;
+  }
+  
+  .info-desc, .youtube {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .cartridgeTouched {
+    opacity: 1;
+    z-index: 600;
+    animation: fadein 0.5s ease forwards;
+  }
+
+  .info-desc {
+    top: 10%;
+    right: unset;
+    width: 100%;
+    height: inherit;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: rgba(250, 240, 230, 0.8);
+    padding: unset;
+  }
+  
+  .info-desc-text {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .youtube {
+    box-sizing: border-box;
+    bottom: 10%;
+    right: unset;
+    width: 100%;
+    height: 30%;
+  }
+  .detail-wrapper{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    top: 40%;
+    left: 40%;
+    background: transparent;
+    z-index: 601;
+  }
 }
