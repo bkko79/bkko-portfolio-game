@@ -323,7 +323,7 @@ $img-space: 15px;
     bottom: 10%;
     right: unset;
     width: 100%;
-    height: 30%;
+    max-height: 280px;
   }
   .detail-wrapper{
     position: absolute;
@@ -334,5 +334,11 @@ $img-space: 15px;
     left: 40%;
     background: transparent;
     z-index: 601;
+  }
+}
+
+@media only screen and (max-height: 568px) {
+  .youtube {
+    max-height: 200px;
   }
 }
