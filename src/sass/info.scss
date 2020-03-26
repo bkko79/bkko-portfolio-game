@@ -224,6 +224,7 @@ $img-space: 15px;
   .screenshot-wrapper {
     top: 50px;
     padding: 5%;
+    height: ($img-width * 0.5625 * 6 + $img-space * 6 + 25);
   }
 
   .screenshot {
@@ -240,7 +241,7 @@ $img-space: 15px;
       transform: translate3d(0, 0, 0);
     }
     100%{
-      transform: translate3d(0, -($img-height * 6 + $img-space * 6  + 25), 0);
+      transform: translate3d(0, -(($img-width*0.75) * 0.5625 * 6 + $img-space * 6 + 25), 0);
     }
   }
 
