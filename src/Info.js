@@ -47,6 +47,7 @@ export default class Info extends React.Component {
               <h1>{title}</h1>
           </div>
         </CSSTransition>
+        <CSSTransition in={inProps} timeout={500} classNames="info">
         <div className="release-date-wrapper">
           <div className="release-date-title wf-notosansjapanese">
             配信日
@@ -57,11 +58,16 @@ export default class Info extends React.Component {
             {release.toLocaleString("ja-jp", {day:'numeric'})}
           </div>
         </div>
+        </CSSTransition>
+        <CSSTransition in={inProps} timeout={500} classNames="info">
         <IoMdPricetag className="price-tag" size='200' color='linen'/>
+        </CSSTransition>
+        <CSSTransition in={inProps} timeout={500} classNames="info">
         <div className="price-wrapper wf-notosansjapanese">
           <div className="price-text">{price}円</div>
           <div className="point-text"><GiTwoCoins color='gold'/>+{point}</div>
         </div>
+        </CSSTransition>
         <CSSTransition in={inProps} timeout={500} classNames="info">
           <div className={`info-desc ${this.state.cartridgeTouched && 'cartridgeTouched'}`}>
             <div className="info-desc-text wf-roundedmplus1c">
