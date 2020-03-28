@@ -95,7 +95,7 @@ const initialDatas = {
             'title': 'ゼルダの伝説 夢をみる島',
             'desc': 'そこは一度入ると出られない不思議な島。\n修行の旅から帰る途中、嵐に巻き込まれ、一度入ると出られないといわれる「コホリント島」に流れ着いたリンク。\n島で暮らす個性豊かな住民たちとの交流や、フィールド・ダンジョンの冒険を通じて、この不思議な島の謎を解き明かし、島からの脱出を目指します。',
             'price': '6578',
-            'release': '2019-9-21',
+            'release': '2019-09-21',
             'serial': 'TC-E-R09AL-JPN',
             'link': 'https://ec.nintendo.com/JP/ja/titles/70010000019976',
             'main_image': './imgs/zelda_main.jpg',
