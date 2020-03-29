@@ -31,7 +31,7 @@
 .title-enter {
   opacity: 0;
 }
-.title-enter-active {
+.title-exit-active {
   opacity: 1;
   animation: 500ms ease-in slideInFromTop;
   transition: opacity 500ms;
@@ -54,6 +54,15 @@
   opacity: 1;
   transition: opacity 500ms;
 }
+
+.date-price-enter {
+  opacity: 0.2;
+}
+.date-price-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
 
 @media only screen and (max-width: 768px) {
   .info-enter-active {

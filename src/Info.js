@@ -47,7 +47,7 @@ export default class Info extends React.Component {
               <h1>{title}</h1>
           </div>
         </CSSTransition>
-        <CSSTransition in={inProps} timeout={500} classNames="info">
+        <CSSTransition in={inProps} timeout={500} classNames="date-price">
         <div className="release-date-wrapper">
           <div className="release-date-title wf-notosansjapanese">
             配信日
@@ -59,10 +59,10 @@ export default class Info extends React.Component {
           </div>
         </div>
         </CSSTransition>
-        <CSSTransition in={inProps} timeout={500} classNames="info">
+        <CSSTransition in={inProps} timeout={500} classNames="date-price">
         <IoMdPricetag className="price-tag" size='200' color='linen'/>
         </CSSTransition>
-        <CSSTransition in={inProps} timeout={500} classNames="info">
+        <CSSTransition in={inProps} timeout={500} classNames="date-price">
         <div className="price-wrapper wf-notosansjapanese">
           <div className="price-text">{price}円</div>
           <div className="point-text"><GiTwoCoins color='gold'/>+{point}</div>
