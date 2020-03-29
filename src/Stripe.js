@@ -6,7 +6,11 @@ export default class Stripe extends React.Component {
   state = {
     width: window.innerWidth,
   }
-  
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.colorSet !== nextProps.colorSet || this.state.width !== nextState.width;
+  }
+
   getRgba = (chip, i) => {
     let text = 'rgba(';
     chip.map((color) => (
@@ -27,10 +31,6 @@ export default class Stripe extends React.Component {
     }
     return styles;
   } 
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.props.colorSet !== nextProps.colorSet;
-  }
 
   render(){
     const { colorSet, inProps } = this.props;
