@@ -16,6 +16,12 @@ DEMO用のURLは下記になります:
 
 [https://bkko-portfolio-game.surge.sh/](https://bkko-portfolio-game.surge.sh/)
 
+***
+
+### 注意点
+
+surge.shはデモサイトを配布する無料CDNサービスなので、ネットワーク転送が非常に遅くなり、画像のロードが予想より遅くなる可能性があります。念の為、全画像をmozjpegを使ってprogressive jpeg付きで平均80%くらいの容量に圧縮しましたが、一応ローカル環境のテストがオススメです。
+
 ## 環境デプロイーマニュアル
 
 この環境はreactのcreate-react-appとyarnを使って構築しました。(npmも使えます。)
@@ -49,12 +55,6 @@ You can now view games in the browser.
 Note that the development build is not optimized.
 To create a production build, use yarn build.
 ```
-
-***
-
-### 注意点
-
-surge.shはデモサイトを配布する無料CDNサービスなので、ネットワーク転送が非常に遅くなり、画像のロードが予想より遅くなる可能性があります。念の為、全画像をmozjpegを使ってprogressive jpeg付きで平均80%くらいの容量に圧縮しましたが、一応ローカル環境のテストがオススメです。
 
 ## 企画
 
