@@ -12,6 +12,10 @@
 
 子供専用より、子供も大人も一緒に楽しむコンテンツが私が今回のポートフォリオで目指した方向です。
 
+DEMO用のURLは下記になります:
+
+[https://bkko-portfolio-game.surge.sh/](https://bkko-portfolio-game.surge.sh/)
+
 ## 環境デプロイーマニュアル
 
 この環境はreactのcreate-react-appとyarnを使って構築しました。(npmも使えます。)
