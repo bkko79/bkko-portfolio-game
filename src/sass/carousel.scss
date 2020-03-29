@@ -141,3 +141,15 @@
     bottom: 25%;
   }
 }
+
+@media only screen and (max-height: 900px) {
+  .game-carousel{
+    top: -100px;
+  }
+  .slick-prev{
+    top: 27%;
+  }
+  .slick-next{
+    bottom: 27%;
+  }
+}
