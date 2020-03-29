@@ -67,6 +67,7 @@ class App extends React.Component {
         <div className="header-right">
           <img src={heart} height="18px" alt="nintendo heart"/>
           <img src={search} height="18px" alt="nintendo search"/>
+          <img src={require(`./imgs/cartridge_front.png`)} alt="cartridge preload" style={{display:"none"}}/>
         </div>
       </div>
       <TransitionGroup>
